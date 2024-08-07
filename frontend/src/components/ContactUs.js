@@ -11,7 +11,7 @@ const ContactUs = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:3000/contact', message);
+            await axios.post('http://ec2-54-91-3-52.compute-1.amazonaws.com:3000/contact', message);
             alert('Message sent!');
         } catch (error) {
             console.error('Error sending message:', error);
