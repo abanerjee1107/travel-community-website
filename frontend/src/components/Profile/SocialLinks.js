@@ -11,7 +11,7 @@ const SocialLinks = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:3000/users/update-social-links', links);
+            await axios.post('http://ec2-54-91-3-52.compute-1.amazonaws.com:3000/users/update-social-links', links);
             // Handle success
         } catch (error) {
             console.error('Update failed:', error);
