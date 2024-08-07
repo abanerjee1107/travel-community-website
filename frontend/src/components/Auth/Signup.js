@@ -8,7 +8,7 @@ const Signup = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:3000/auth/signup', { email, password });
+            await axios.post('http://ec2-54-91-3-52.compute-1.amazonaws.com:3000/auth/signup', { email, password });
             // Redirect to login or home
         } catch (error) {
             console.error('Signup failed:', error);
