@@ -7,7 +7,7 @@ const RewardsList = () => {
     useEffect(() => {
         const fetchRewards = async () => {
             try {
-                const response = await axios.get('http://localhost:3000/rewards');
+                const response = await axios.get('http://ec2-54-91-3-52.compute-1.amazonaws.com:3000/rewards');
                 setRewards(response.data);
             } catch (error) {
                 console.error('Failed to fetch rewards:', error);
