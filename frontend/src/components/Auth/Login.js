@@ -8,7 +8,7 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:3000/auth/signin', { email, password });
+            const response = await axios.post('http://ec2-54-91-3-52.compute-1.amazonaws.com:3000/auth/signin', { email, password });
             localStorage.setItem('token', response.data.token);
             // Redirect to home or dashboard
         } catch (error) {
