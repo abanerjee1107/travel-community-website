@@ -6,7 +6,7 @@ const Chat = () => {
 
     const handleSendMessage = async () => {
         try {
-            await axios.post('http://localhost:3000/messages', { content: message });
+            await axios.post('http://ec2-54-91-3-52.compute-1.amazonaws.com:3000/messages', { content: message });
             setMessage('');
         } catch (error) {
             console.error('Failed to send message:', error);
