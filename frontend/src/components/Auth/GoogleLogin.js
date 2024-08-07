@@ -6,7 +6,7 @@ const GoogleLoginComponent = () => {
     const handleLoginSuccess = async (response) => {
         const { tokenId } = response;
         try {
-            const res = await axios.post('http://localhost:3000/auth/google', { tokenId });
+            const res = await axios.post('http://ec2-54-91-3-52.compute-1.amazonaws.com:3000/auth/google', { tokenId });
             localStorage.setItem('token', res.data.token);
             // Redirect to home or dashboard
         } catch (error) {
