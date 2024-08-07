@@ -14,7 +14,7 @@ const ProfilePictureUpload = () => {
         formData.append('file', file);
 
         try {
-            await axios.post('http://localhost:3000/users/upload-profile-picture', formData, {
+            await axios.post('http://ec2-54-91-3-52.compute-1.amazonaws.com:3000/users/upload-profile-picture', formData, {
                 headers: { 'Content-Type': 'multipart/form-data' }
             });
             // Handle success
