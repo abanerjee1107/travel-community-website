@@ -7,7 +7,7 @@ const TipDetail = ({ match }) => {
     useEffect(() => {
         const fetchTip = async () => {
             try {
-                const response = await axios.get(`http://localhost:3000/tips/${match.params.id}`);
+                const response = await axios.get(`http://ec2-54-91-3-52.compute-1.amazonaws.com:3000/tips/${match.params.id}`);
                 setTip(response.data);
             } catch (error) {
                 console.error('Failed to fetch tip:', error);
