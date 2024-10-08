@@ -1,1 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: travel-community-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: travel-community
+  template:
+    metadata:
+      labels:
+        app: travel-community
+    spec:
+      containers:
+      - name: frontend
+        image: frontend-image
+        ports:
+        - containerPort: 3000
+      - name: backend
+        image: backend-image
+        ports:
+        - containerPort: 5000
 
